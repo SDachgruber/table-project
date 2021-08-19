@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <TableComponent
+      msg="Table Compponent"
+      :header="['A', 'B']"
+      :bodydata="tableBodyContent"
+    />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TableComponent from "./components/Table.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TableComponent,
+  },
+  data() {
+    return {
+      tableBodyContent: [
+        ["@", "µ"],
+        ["", "€"],
+      ],
+    };
+  },
+};
 </script>
 
 <style>
