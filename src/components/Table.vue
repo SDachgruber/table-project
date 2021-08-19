@@ -25,7 +25,34 @@ export default {
   props: {
     msg: String,
     header: Array,
-    bodydata: Array
+    bodydata: Array,
   },
 };
 </script>
+
+<style>
+table {
+  width: 100%;
+  background: #f5f5f5;
+}
+th, td {
+  padding: 0.25rem;
+  text-align: center;
+}
+
+th {
+    background: limegreen;
+}
+
+tbody {
+    background: #ddd;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: #eee;
+}
+
+tbody tr:hover {
+  background: #dcdcdc;
+}
+</style>
